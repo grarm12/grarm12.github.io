@@ -1,46 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<style type="text/css">
-		button{
-			margin: 10px;
-		}
-	</style>
-	<title>Happy new year</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <!-- Custom styles for this template -->
+    <link href="headers.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="carousel.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+      .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+
+      @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+
+      .b-example-divider {
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+      .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+
+      .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+
+      .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+
+      .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+</style>
+  <title>Document</title>
 </head>
-<body>
-	<p id="text" style="font-size: 42px;">0</p>
-	<button onclick="cl()">click</button>
-	<br>
-	<button onclick="level_up()">level up</button>
-	<br>
-	<button onclick="auto()">auto click</button>
-	<br>
-	<div style="background-color: #efefef; padding: 10px; width: 220px;">
-		<img src="question.jpg" width="200px" style="margin-left: 10px;" id="tree" onclick="buy()">
-		<br>
-		<h1 style="text-align: center;">10000 click's</h1>
-	</div>
+<body style="padding: 0;">
+<!-- шапка начало -->
+  <header class="p-3 " style="background-color: black; ">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="text-decoration-none">
+          <svg width="220" height="124"  style = "background-image: url(img/logo.gif); background-size:cover; background-position: center;"><use xlink:href="#bootstrap"/></svg>
+        </a>
 
-	
-	<script type="text/javascript">
-		var c = 0;
-		var text = document.getElementById('text');
-		var a = 1;
-		function cl() {
-			console.log("click");
-			c = c+a;
-			text.innerHTML = c;
-		}
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Дом</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Особенности</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Цена</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Вопросы</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>
+        </ul>
 
-		function level_up() {
-			console.log("level_up");
-			a = a +1;
-		}
-	</script>
-	<script type="text/javascript" src="script.js"></script>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Авторизация</button>
+          <button type="button" class="btn btn-warning">Зарегистрироватся</button>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- шапка конец -->
+
+<!-- начало карусели -->
+  <main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/infinity.png" width="100%">
+        <!-- 1 -->
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>СЕКРЕТНЫЕ ВОЙНЫ.</h1>
+            <p>Самое то прочитать этот комикс перед выходом фильма за 2500P.</p>
+            <p><a class="btn btn-lg btn-primary" href="wars.html">Купить сейчас</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+      <img src="img/iron.jpeg">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Железный Человек.</h1>
+            <p>Нет в наличии!).</p>
+            <p><a class="btn btn-lg btn-primary" href="iron.html">Добавить в карзину</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+      <img src="img/spider.jpg">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Цена за человека паука 1200P вместо 2250P.</h1>
+            <p>Класный комикс,подойдет для любителей классического паука.</p>
+            <p><a class="btn btn-lg btn-primary" href="man.html">Купить сейчас</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+      <img src="img/galaxy.png" style="width:33%;">
+        <h2 class="fw-normal">Стражи Галактики</h2>
+        <p>Это лучшая игра 2022года по вселенной Стражи Галактики.</p>
+        <p><a class="btn btn-secondary" href="text.html">Подробнее &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="img/spi.png" style="width:33%;">
+        <h2 class="fw-normal">Человек Паук</h2>
+        <p>Лучше пройти первую часть чем начинать со второй не разобравшисть).</p>
+        <p><a class="btn btn-secondary" href="spiderman.html">Подробнее &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="img/ave.png" style="width:33%;">
+        <h2 class="fw-normal">МСТИТЕЛИ</h2>
+        <p>Ну и сама классика))).</p>
+        <p><a class="btn btn-secondary" href="avengers.html">Подробнее &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7" style="display: flex; width:100%;">
+        <div class="col-md-8">
+          <h2 class="featurette-heading fw-normal lh-1">Человек паук 2014. <span class="text-muted"></span></h2>
+          <p class="lead">Классная и очень подвижная фигурка:).</p>
+          <p><a class="btn btn-secondary" href="sh.html">Подробнее &raquo;</a></p>
+        </div>
+        <div style="width:100%;">
+          <img src="img/spid.jpeg" style="width: 100%;">
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7" style="display: flex; width:100%;">
+        <div style="width: 100%;">
+          <img src="img/iro.jpg" style="width: 100%;">
+        </div>
+        <div class="col-md-9">
+          <h2 class="featurette-heading fw-normal lh-1">Железный человек. <span class="text-muted"></span></h2>
+          <p class="lead">моя любимая фигурка.Ты есче не купил ее?</p>
+          <p><a class="btn btn-secondary" href="fg.html">Подробнее &raquo;</a></p>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7" style="display: flex; width:100%;">
+        <div class="col-md-6">
+          <h2 class="featurette-heading fw-normal lh-1">Эди Брок. <span class="text-muted">Веном.</span></h2>
+          <p class="lead">Классная фигурка для любителей венома.</p>
+          <p><a class="btn btn-secondary" href="ven.html">Подробнее &raquo;</a></p>
+        </div>
+
+        <div style="width: 100%;">
+          <img src="img/venom.jpg" style="width: 100%;">
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Вернутся на вверх</a></p>
+    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="privacy.html">Конфиденциальность</a> &middot; <a href="besement.html">Условия</a></p>
+  </footer>
+</main>
+
+ <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
